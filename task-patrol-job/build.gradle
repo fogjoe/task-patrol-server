@@ -1,0 +1,5 @@
+dependencies {
+    // 定时任务也要调用业务逻辑
+    implementation project(':task-patrol-service')
+}
+bootJar { enabled = true } // Job 通常也可以独立启动，保留

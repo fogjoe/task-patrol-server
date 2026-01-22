@@ -1,0 +1,7 @@
+dependencies {
+    // 放置通用的工具库，比如 Hutool, Commons-Lang3
+    // implementation 'cn.hutool:hutool-all:5.8.25'
+}
+// common 模块不需要打成可执行 jar，关掉 bootJar
+bootJar { enabled = false }
+jar { enabled = true }

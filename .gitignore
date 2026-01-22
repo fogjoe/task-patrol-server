@@ -35,3 +35,24 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### macOS (你是 Mac 用户，这几行必须加，否则会提交垃圾文件) ###
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+### Logs (后端运行日志，绝对不能提交) ###
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+### Java Crash Logs (JVM 崩溃时的错误日志) ###
+hs_err_pid*
+replay_pid*
+
+### Secrets (防止以后不小心提交密码) ###
+.env
+application-secret.properties

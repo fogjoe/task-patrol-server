@@ -1,0 +1,10 @@
+dependencies {
+    // 依赖 common 模块
+    implementation project(':task-patrol-common')
+
+    // 数据库相关依赖放在这里 (JPA/MyBatis)
+    // implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    // runtimeOnly 'mysql:mysql-connector-java'
+}
+bootJar { enabled = false }
+jar { enabled = true }
