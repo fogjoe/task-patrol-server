@@ -2,8 +2,8 @@ plugins {
     id 'java'
     // 建议使用 3.2.1 或 3.4.1，确保版本真实存在且稳定
     // 如果你非常确定 4.0.1 能用且公司在用，可以改回去，但在学习阶段建议用主流版本
-    id 'org.springframework.boot' version '3.2.1'
-    id 'io.spring.dependency-management' version '1.1.4'
+    id 'org.springframework.boot' version '3.4.13'
+    id 'io.spring.dependency-management' version '1.1.7'
 }
 
 // 1. 根项目不生成 jar 包，它只是个管理容器
@@ -19,6 +19,8 @@ subprojects {
     // 【关于 Group ID 的回答见下文】
     group = 'com.example.shadow'
     version = '0.0.1-SNAPSHOT'
+
+    ext['logback.version'] = '1.5.25'
 
     // 设定 JDK 版本
     java {
