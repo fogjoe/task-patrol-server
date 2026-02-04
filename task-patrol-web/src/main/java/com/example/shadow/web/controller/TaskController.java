@@ -1,6 +1,7 @@
 package com.example.shadow.web.controller;
 
 import com.example.shadow.biz.domain.TaskDo;
+import com.example.shadow.biz.dto.TaskStatsResp;
 import com.example.shadow.biz.service.TaskService;
 import com.example.shadow.web.dto.CreateTaskReq;
 import lombok.RequiredArgsConstructor;
@@ -26,5 +27,10 @@ public class TaskController {
     @GetMapping
     public List<TaskDo> list() {
         return taskService.findAllTasks();
+    }
+
+    @GetMapping("/stats")
+    public TaskStatsResp getStats() {
+        return taskService.getStatistics();
     }
 }
