@@ -4,5 +4,7 @@ dependencies {
 
     // Web 启动器
     implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
 }
 // 这是一个 Web 应用，必须保留 bootJar enabled = true
