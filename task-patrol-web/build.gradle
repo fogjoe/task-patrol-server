@@ -1,10 +1,14 @@
 dependencies {
     // 依赖 service 模块 (Web 层调用 Service 层)
     implementation project(':task-patrol-service')
+    implementation project(':task-patrol-job')
+    implementation project(':task-patrol-common')
 
     // Web 启动器
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
     implementation 'org.springframework.boot:spring-boot-starter-aop'
+
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
 }
 // 这是一个 Web 应用，必须保留 bootJar enabled = true

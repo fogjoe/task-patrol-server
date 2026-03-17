@@ -8,6 +8,10 @@ import java.util.List;
 
 public interface TaskService {
     Long createTask(String title, LocalDateTime deadline);
+
     List<TaskDo> findAllTasks();
+
     TaskStatsResp getStatistics();
+
+    TaskDo getTaskById(Long id);
 }

@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -64,5 +65,13 @@ public class TaskServiceImpl implements TaskService {
         resp.setExpiredTaskIds(expiredIds);
 
         return resp;
+    }
+
+    @Override
+    public TaskDo getTaskById(Long id) {
+        TaskDo task = taskMapper.selectById(id);
+
+        return Optional.ofNullable(task)
+                .orElseThrow(() -> new RuntimeException("The task doesn't exist (ID=" + id + ")"));
     }
 }
